@@ -67,129 +67,129 @@
 // Press 'L' to set your pet's level!
 // =-=-=-=-=-=-=-=-=-=-+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+-=-=-=-=-=-=-=-=-=-=-
 
-showCheats(); //Cheat function to display controls
+showCheats();
 
-document.title = "*HACKED* YoHoHo.io - pirate battle royale io game"; //Changes title name
+document.title = "*HACKED* YoHoHo.io - pirate battle royale io game"; 
 
-document.addEventListener('keydown', cheats, false); //Checks for when you press a key
+document.addEventListener('keydown', cheats, false); 
 
-function showCheats() //Show cheats in side control area
+function showCheats() 
 {
-    var box = document.getElementById("desktop-controls"); //Control box
-    var controls = document.createElement("div"); //New div
-    controls.className = "title2"; //Class name
-    controls.id = "hackids"; //ID
-    var hacks = document.getElementById("hackids"); //ID name
-    var hackselement = document.createElement("div"); //New div
+    var box = document.getElementById("desktop-controls"); 
+    var controls = document.createElement("div"); 
+    controls.className = "title2"; 
+    controls.id = "hackids"; 
+    var hacks = document.getElementById("hackids"); 
+    var hackselement = document.createElement("div"); 
     var hackstextnode = document.createTextNode("I - Change your island (Conflicts with XP cheat.)" + " O - Gain a set amount of coins" + " P = Change your character, buggy" + " X = Set XP! (Conflicts with island cheat, buggy.)"); //Control text
-    hackselement.appendChild(hackstextnode); //text node stuff
-    var controlstextnode = document.createTextNode("Cheats"); //text node
-    box.appendChild(controls); //append child
-    box.appendChild(hackselement); //append child
+    hackselement.appendChild(hackstextnode); 
+    var controlstextnode = document.createTextNode("Cheats"); 
+    box.appendChild(controls); 
+    box.appendChild(hackselement); 
 }
 
-function cheats(e) //keydown function cheats blah blah blah
+function cheats(e) 
 {
-    if (e.keyCode =="79") //O - Coins
+    if (e.keyCode =="79") 
     {
         var a = prompt("What would you like to set your coin coint to?"); //prompt
-        if(isNaN(a)) //if not a number
+        if(isNaN(a)) 
         {
             alert("Oops! Something went wrong! Perhaps entering a number next time will solve the issue?")
         }
         else
         {
-            localStorage.setItem("coinsOwned", a); //change coing count
-            document.getElementById("homepage-booty").innerHTML = a; //changes coin count
-            document.getElementById("skin-popup-booty").innerHTML = a; //changes coin count
-            alert("Gold set! Reloading...") //reload message
-            location.reload() //reloads
+            localStorage.setItem("coinsOwned", a); 
+            document.getElementById("homepage-booty").innerHTML = a; 
+            document.getElementById("skin-popup-booty").innerHTML = a; 
+            alert("Gold set! Reloading...") 
+            location.reload() 
         }
     }
-    else if (e.keyCode == "88") //X - XP
+    else if (e.keyCode == "88") 
     {
-        var x = prompt("What would you like to set your XP to?"); //prompt
-        if(isNaN(x)) //if not a number
+        var x = prompt("What would you like to set your XP to?"); 
+        if(isNaN(x)) 
         {
             alert("Oops! Something went wrong! Perhaps entering a number next time will solve the issue?") //error message
         }
-        else if (x >= 13500) //if equal to or greater that 13,500
+        else if (x >= 13500) 
         {
-            localStorage.setItem("playerXP", 13500); //sets to 13,500
-            alert("XP set! Reloading...") //reload message
-            location.reload() //reloads
+            localStorage.setItem("playerXP", 13500); 
+            alert("XP set! Reloading...") 
+            location.reload() 
         }
-        else if (x <= 0) //if less than or equal to 0
+        else if (x <= 0) 
         {
-            localStorage.setItem("playerXP", 0); //sets to 0
+            localStorage.setItem("playerXP", 0); 
             alert("XP set! Reloading...")
             location.reload()
         }
         else
         {
-            localStorage.setItem("playerXP", x); //etc.
-            alert("XP set! Reloading...") //etc.
-            location.reload() //etc.
+            localStorage.setItem("playerXP", x); 
+            alert("XP set! Reloading...") 
+            location.reload() 
         }
     }
-    else if(e.keyCode == "67") //C - Character
+    else if(e.keyCode == "67") 
     {
-        var b = prompt("Which character would you like to become? Please pick a number between 1 and 35!") //prompt
-        if (isNaN(b)) //if not a number
+        var b = prompt("Which character would you like to become? Please pick a number between 1 and 35!") 
+        if (isNaN(b)) 
         {
-            alert("Oops! something went wrong! Perhaps entering a number next time will solve the issue?") //error message
+            alert("Oops! something went wrong! Perhaps entering a number next time will solve the issue?") 
         }
-        else if (b < 1 || b > 35) //if less than 1 or greatre than 35
-        {
-            alert("Oops! something went wrong! Please choose a number between 1 and 35!") //error message
+        else if (b < 1 || b > 35) 
+            
+            alert("Oops! something went wrong! Please choose a number between 1 and 35!") 
         }
         else
         {
-            localStorage.setItem("playerSkin", b); //sets skin
-            alert("Skin selected! Reloading...") //etc.
-            location.reload() //etc.
+            localStorage.setItem("playerSkin", b); 
+            alert("Skin selected! Reloading...") 
+            location.reload() 
         }
     }
-    else if(e.keyCode == "80") //P - Pet
+    else if(e.keyCode == "80") 
     {
-        var p = prompt("Which character would you like to become? Please pick a number between 1 and 7!") //etc.
-        if (isNaN(p)) //etc.
+        var p = prompt("Which character would you like to become? Please pick a number between 1 and 7.)
+        if (isNaN(p)) 
         {
-            alert("Oops! something went wrong! Perhaps entering a number next time will solve the issue?") //etc.
+            alert("Oops! something went wrong! Perhaps entering a number next time will solve the issue?") 
         }
-        else if (p < 1 || p > 7) //if less than 1 or greater than 7
+        else if (p < 1 || p > 7) 
         {
-            alert("Oops! something went wrong! Please choose a number between 1 and 7!") //etc.
+            alert("Oops! something went wrong! Please choose a number between 1 and 7!") 
         }
         else
         {
-            localStorage.setItem("playerPet", p); //etc.
-            alert("Pet selected! Reloading...") //etc.
-            location.reload() //etc.
+            localStorage.setItem("playerPet", p); 
+            alert("Pet selected! Reloading...") 
+            location.reload() 
         }
     }
-    else if(e.keyCode == "76") //L - Pet Level
+    else if(e.keyCode == "76") 
     {
-        var l = prompt("What level would you like your pet to be? Please pick a number between 1 and 14!") //etc.
-        if (isNaN(l)) //etc.
+        var l = prompt("What level would you like your pet to be? Please pick a number between 1 and 14!") 
+        if (isNaN(l)) 
         {
-            alert("Oops! something went wrong! Perhaps entering a number next time will solve the issue?") //etc.
+            alert("Oops! something went wrong! Perhaps entering a number next time will solve the issue?") 
         }
-        else if (l < 1 || l > 14) //if less than 1 or greater than 14
+        else if (l < 1 || l > 14) 
         {
-            alert("Oops! something went wrong! Please choose a number between 1 and 14!") //etc.
+            alert("Oops! something went wrong! Please choose a number between 1 and 14!") 
         }
         else
         {
-            localStorage.setItem("playerPetLevel", l); //etc.
-            alert("Pet level selected! Reloading...") //etc.
-            location.reload() //etc.
+            localStorage.setItem("playerPetLevel", l); 
+            alert("Pet level selected! Reloading...") 
+            location.reload() 
         }
     }
-    else if(e.keyCode == "73") //I - Island
+    else if(e.keyCode == "73") 
     {
-        var c = prompt("Which island would you like to travel to?\n1 = Tortuga\n2 = Beach\n3 = Easter\n4 = Wreck\n5 = Aztec\n6 = Volcano\n7 = Village") //prompt (\n means like break)
-        if(c == 1) //is exactly equal to one //0,140,700,2100,4400,7600,13500
+        var c = prompt("Which island would you like to travel to?\n1 = Tortuga\n2 = Beach\n3 = Easter\n4 = Wreck\n5 = Aztec\n6 = Volcano\n7 = Village") 
+        if(c == 1) 
         {
             localStorage.setItem("playerXP", 0);
             alert("Island set to Tortuga. Reloading...");
